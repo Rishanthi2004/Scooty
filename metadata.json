@@ -1,0 +1,6 @@
+{
+  "name": "EV Scooty | Next-Gen Electric Mobility",
+  "description": "A cinematic 3D showcase for EV Scooty, featuring interactive real-time 3D scooter transformations, floating modular battery, performance motion, and custom finishes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

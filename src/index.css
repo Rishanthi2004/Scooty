@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f8f9fa;
+    color: #0f172a;
+  }
+  
+  .font-display {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Base Light Studio Theme (Default) */
+[data-theme="studio"], body {
+  background-color: #f8f9fa;
+  color: #0f172a;
+}
+
+/* Subtle Dark Mode Support */
+[data-theme="midnight"] {
+  background-color: #0b0e14 !important;
+  color: #f8fafc;
+}
+
+[data-theme="midnight"] .bg-white,
+[data-theme="midnight"] .bg-white\/90,
+[data-theme="midnight"] .bg-white\/85,
+[data-theme="midnight"] .bg-white\/80 {
+  background-color: rgba(18, 24, 38, 0.85) !important;
+  border-color: rgba(51, 65, 85, 0.7) !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="midnight"] .text-neutral-900 {
+  color: #ffffff !important;
+}
+
+[data-theme="midnight"] .text-neutral-600,
+[data-theme="midnight"] .text-neutral-500 {
+  color: #94a3b8 !important;
+}
+
+[data-theme="midnight"] .border-neutral-200,
+[data-theme="midnight"] .border-neutral-200\/80,
+[data-theme="midnight"] .border-neutral-200\/70 {
+  border-color: rgba(51, 65, 85, 0.7) !important;
+}
