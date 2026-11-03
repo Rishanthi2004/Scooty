@@ -38,46 +38,46 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="relative w-full max-w-lg bg-white rounded-3xl border border-neutral-200 shadow-2xl p-6 sm:p-8 overflow-hidden text-neutral-900">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+      <div className="relative w-full max-w-lg bg-[#111622] rounded-3xl border border-slate-800 shadow-2xl p-6 sm:p-8 overflow-hidden text-white">
         {/* Close Button */}
         <button
           onClick={handleResetAndClose}
-          className="absolute top-5 right-5 p-2 rounded-full hover:bg-neutral-100 text-neutral-400 hover:text-neutral-800 transition-colors cursor-pointer"
+          className="absolute top-5 right-5 p-2 rounded-full hover:bg-slate-800 text-slate-400 hover:text-white transition-colors cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
 
         {submitted ? (
           <div className="text-center py-8">
-            <div className="w-16 h-16 bg-emerald-50 text-emerald-600 border border-emerald-200 rounded-full flex items-center justify-center mx-auto mb-5 shadow-2xs">
+            <div className="w-16 h-16 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded-full flex items-center justify-center mx-auto mb-5 shadow-2xs">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-bold font-display text-neutral-900">
+            <h3 className="text-2xl font-bold font-display text-white">
               {activeTab === 'test-ride' ? 'Test Ride Scheduled!' : 'Reservation Confirmed!'}
             </h3>
-            <p className="mt-2 text-sm text-neutral-600 max-w-sm mx-auto">
-              We have sent a confirmation to <span className="font-semibold text-neutral-900">{email || 'your email'}</span>. A mobility specialist will prepare your Aura X1 in <span className="font-semibold text-neutral-900">{color.name}</span>.
+            <p className="mt-2 text-sm text-slate-300 max-w-sm mx-auto">
+              We have sent a confirmation to <span className="font-semibold text-white">{email || 'your email'}</span>. A mobility specialist will prepare your Aura X1 in <span className="font-semibold text-cyan-400">{color.name}</span>.
             </p>
 
-            <div className="mt-6 p-4 rounded-2xl bg-neutral-50 border border-neutral-200/80 text-left text-xs text-neutral-700 space-y-1.5">
+            <div className="mt-6 p-4 rounded-2xl bg-[#161c2b] border border-slate-700/80 text-left text-xs text-slate-300 space-y-1.5">
               <div className="flex justify-between">
-                <span className="text-neutral-500">BOOKING CODE:</span>
-                <span className="font-mono font-bold text-neutral-900">EV-2026-X884</span>
+                <span className="text-slate-400">BOOKING CODE:</span>
+                <span className="font-mono font-bold text-cyan-400">EV-2026-X884</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-neutral-500">SELECTED HUB:</span>
-                <span className="font-medium text-neutral-900">{city} Experience Center</span>
+                <span className="text-slate-400">SELECTED HUB:</span>
+                <span className="font-medium text-white">{city} Experience Center</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-neutral-500">FINISH SPEC:</span>
-                <span className="font-medium text-neutral-900">{color.name} ({color.badge})</span>
+                <span className="text-slate-400">FINISH SPEC:</span>
+                <span className="font-medium text-white">{color.name} ({color.badge})</span>
               </div>
             </div>
 
             <button
               onClick={handleResetAndClose}
-              className="mt-6 w-full bg-neutral-900 hover:bg-neutral-800 text-white font-semibold text-sm py-3.5 rounded-xl transition-all cursor-pointer shadow-sm"
+              className="mt-6 w-full bg-white hover:bg-slate-100 text-neutral-950 font-bold text-sm py-3.5 rounded-xl transition-all cursor-pointer shadow-sm"
             >
               Back to Experience
             </button>
@@ -85,20 +85,20 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         ) : (
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-6 h-6 rounded-md bg-neutral-900 text-white flex items-center justify-center">
-                <Zap className="w-3.5 h-3.5 fill-white text-white" />
+              <div className="w-6 h-6 rounded-md bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center">
+                <Zap className="w-3.5 h-3.5 fill-cyan-400 text-cyan-400" />
               </div>
-              <span className="text-xs font-mono uppercase tracking-widest text-neutral-500">
+              <span className="text-xs font-mono uppercase tracking-widest text-cyan-400">
                 Aura X1 EV Scooty
               </span>
             </div>
 
-            <h3 className="text-2xl font-bold font-display text-neutral-900">
+            <h3 className="text-2xl font-bold font-display text-white">
               Experience the Ride
             </h3>
 
             {/* Mode Switcher Tabs */}
-            <div className="grid grid-cols-2 gap-1 p-1 bg-neutral-100 rounded-xl my-5 border border-neutral-200/80">
+            <div className="grid grid-cols-2 gap-1 p-1 bg-[#0d121c] rounded-xl my-5 border border-slate-800">
               <button
                 type="button"
                 onClick={() => {
@@ -107,8 +107,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 }}
                 className={`py-2 text-xs font-semibold rounded-lg transition-all cursor-pointer ${
                   activeTab === 'test-ride'
-                    ? 'bg-white text-neutral-900 shadow-2xs border border-neutral-200'
-                    : 'text-neutral-500 hover:text-neutral-900'
+                    ? 'bg-[#1e2638] text-white shadow-2xs border border-cyan-500/40'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 VIP Test Ride
@@ -121,8 +121,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 }}
                 className={`py-2 text-xs font-semibold rounded-lg transition-all cursor-pointer ${
                   activeTab === 'reserve'
-                    ? 'bg-white text-neutral-900 shadow-2xs border border-neutral-200'
-                    : 'text-neutral-500 hover:text-neutral-900'
+                    ? 'bg-[#1e2638] text-white shadow-2xs border border-cyan-500/40'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 Reserve Vehicle ($99)
@@ -131,7 +131,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
             {/* Selected Color Pill */}
             <div className="mb-4">
-              <label className="block text-xs font-semibold text-neutral-700 mb-1.5">
+              <label className="block text-xs font-semibold text-slate-300 mb-1.5">
                 Preferred Color Finish:
               </label>
               <div className="flex items-center gap-2">
@@ -146,13 +146,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     title={col.name}
                     className={`w-7 h-7 rounded-full border transition-all cursor-pointer ${
                       color.id === col.id
-                        ? 'border-neutral-900 scale-105 ring-2 ring-neutral-900/15'
-                        : 'border-neutral-300'
+                        ? 'border-cyan-400 scale-105 ring-2 ring-cyan-400/30'
+                        : 'border-slate-600'
                     }`}
                     style={{ backgroundColor: col.hex }}
                   />
                 ))}
-                <span className="text-xs text-neutral-700 font-medium ml-2">
+                <span className="text-xs text-slate-300 font-medium ml-2">
                   {color.name}
                 </span>
               </div>
@@ -161,7 +161,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             {/* Booking Form */}
             <form onSubmit={handleSubmit} className="space-y-3.5">
               <div>
-                <label className="block text-xs font-semibold text-neutral-700 mb-1">
+                <label className="block text-xs font-semibold text-slate-300 mb-1">
                   Full Name
                 </label>
                 <input
@@ -170,13 +170,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   placeholder="Elena Vance"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 bg-white text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-700 bg-[#161c2b] text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs font-semibold text-neutral-700 mb-1">
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">
                     Email Address
                   </label>
                   <input
@@ -185,11 +185,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     placeholder="elena@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 bg-white text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-700 bg-[#161c2b] text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-neutral-700 mb-1">
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">
                     Phone Number
                   </label>
                   <input
@@ -198,44 +198,44 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     placeholder="+1 (555) 019-2834"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 bg-white text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-700 bg-[#161c2b] text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-neutral-700 mb-1">
+                <label className="block text-xs font-semibold text-slate-300 mb-1">
                   Preferred Experience Center
                 </label>
                 <select
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 bg-white text-sm text-neutral-900 focus:outline-none focus:border-neutral-900"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-700 bg-[#161c2b] text-sm text-white focus:outline-none focus:border-cyan-400"
                 >
-                  <option value="San Francisco, CA">San Francisco, CA — Design Studio Hub</option>
-                  <option value="New York, NY">New York, NY — SoHo Experience Center</option>
-                  <option value="Austin, TX">Austin, TX — South Congress Studio</option>
-                  <option value="Los Angeles, CA">Los Angeles, CA — Venice Beach Lab</option>
-                  <option value="Seattle, WA">Seattle, WA — Westlake Flagship</option>
+                  <option value="San Francisco, CA" className="bg-[#161c2b] text-white">San Francisco, CA — Design Studio Hub</option>
+                  <option value="New York, NY" className="bg-[#161c2b] text-white">New York, NY — SoHo Experience Center</option>
+                  <option value="Austin, TX" className="bg-[#161c2b] text-white">Austin, TX — South Congress Studio</option>
+                  <option value="Los Angeles, CA" className="bg-[#161c2b] text-white">Los Angeles, CA — Venice Beach Lab</option>
+                  <option value="Seattle, WA" className="bg-[#161c2b] text-white">Seattle, WA — Westlake Flagship</option>
                 </select>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-neutral-900 hover:bg-neutral-800 text-white font-semibold text-sm py-3.5 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 mt-4 cursor-pointer"
+                className="w-full bg-white hover:bg-slate-100 text-neutral-950 font-bold text-sm py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 mt-4 cursor-pointer"
               >
                 <span>
                   {activeTab === 'test-ride' ? 'Confirm VIP Test Ride' : 'Authorize $99 Refundable Deposit'}
                 </span>
-                <ArrowRight className="w-4 h-4 text-white" />
+                <ArrowRight className="w-4 h-4 text-neutral-950" />
               </button>
 
-              <div className="flex items-center justify-center gap-4 text-[11px] text-neutral-500 pt-1">
+              <div className="flex items-center justify-center gap-4 text-[11px] text-slate-400 pt-1">
                 <span className="flex items-center gap-1">
-                  <Calendar className="w-3 h-3 text-neutral-600" /> Same-day scheduling
+                  <Calendar className="w-3 h-3 text-cyan-400" /> Same-day scheduling
                 </span>
                 <span className="flex items-center gap-1">
-                  <MapPin className="w-3 h-3 text-neutral-600" /> Helmet & gear provided
+                  <MapPin className="w-3 h-3 text-cyan-400" /> Helmet & gear provided
                 </span>
               </div>
             </form>

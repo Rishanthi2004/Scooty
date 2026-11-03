@@ -73,10 +73,10 @@ export const DesignSection: React.FC<DesignSectionProps> = ({
                   soundFX.playClick();
                   onSelectHotspot(isSelected ? null : hotspot.id);
                 }}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer border shadow-2xs ${
+                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer border shadow-sm ${
                   isSelected
-                    ? 'bg-neutral-900 text-white border-neutral-900 shadow-sm'
-                    : 'bg-white hover:bg-neutral-50 text-neutral-700 border-neutral-200/90'
+                    ? 'bg-white text-neutral-950 border-white shadow-md'
+                    : 'bg-[#111622] hover:bg-[#161c2b] text-slate-300 border-slate-800 hover:border-slate-700'
                 }`}
               >
                 {hotspot.name}
@@ -92,7 +92,7 @@ export const DesignSection: React.FC<DesignSectionProps> = ({
                 soundFX.playClick();
                 onSelectHotspot(null);
               }}
-              className="px-3.5 py-2 rounded-xl text-xs font-medium text-neutral-500 hover:text-neutral-900 underline cursor-pointer"
+              className="px-3.5 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-white underline cursor-pointer"
             >
               Reset Overview
             </motion.button>
@@ -103,7 +103,7 @@ export const DesignSection: React.FC<DesignSectionProps> = ({
       {/* Middle open space for 3D camera zoom */}
       <div className="h-28 sm:h-40 my-auto" />
 
-      {/* Floating 3D Tilt Card for active component callout */}
+      {/* Floating 3D Tilt Card for active component callout - Dark Titanium */}
       <div className="max-w-xl mx-auto w-full pointer-events-auto">
         <AnimatePresence mode="wait">
           <motion.div
@@ -113,24 +113,24 @@ export const DesignSection: React.FC<DesignSectionProps> = ({
             exit={{ opacity: 0, y: -15, scale: 0.98 }}
             transition={{ duration: 0.3 }}
           >
-            <TiltCard glowColor="rgba(0, 0, 0, 0.04)" tiltAmount={4.5}>
-              <div className="p-6 sm:p-7 rounded-2xl bg-white/95 border border-neutral-200/90 shadow-md backdrop-blur-xl transition-all">
-                <div className="flex items-center justify-between text-xs font-mono text-neutral-500 mb-2">
-                  <span className="uppercase tracking-widest text-neutral-400">COMPONENT SPEC</span>
-                  <span className="text-neutral-900 font-semibold uppercase flex items-center gap-1.5">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-neutral-900" />
+            <TiltCard glowColor="rgba(56, 189, 248, 0.15)" tiltAmount={4.5}>
+              <div className="p-6 sm:p-7 rounded-2xl bg-[#111622]/95 border border-slate-800 shadow-2xl backdrop-blur-xl transition-all">
+                <div className="flex items-center justify-between text-xs font-mono text-slate-400 mb-2">
+                  <span className="uppercase tracking-widest text-cyan-400 font-semibold">COMPONENT SPEC</span>
+                  <span className="text-white font-semibold uppercase flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" />
                     {currentItem.name}
                   </span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900">{currentItem.title}</h3>
-                <p className="mt-2 text-sm text-neutral-600 leading-relaxed font-normal">
+                <h3 className="text-xl sm:text-2xl font-bold font-display text-white">{currentItem.title}</h3>
+                <p className="mt-2 text-sm text-slate-300 leading-relaxed font-normal">
                   {currentItem.description}
                 </p>
 
-                <div className="mt-4 pt-4 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500 font-mono">
+                <div className="mt-4 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
                   <span>AEROSPACE GRADE SPEC</span>
-                  <span className="text-neutral-900 font-semibold">TOLERANCE ±0.05 MM</span>
+                  <span className="text-cyan-400 font-semibold">TOLERANCE ±0.05 MM</span>
                 </div>
               </div>
             </TiltCard>

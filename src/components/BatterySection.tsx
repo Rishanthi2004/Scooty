@@ -45,52 +45,52 @@ export const BatterySection: React.FC = () => {
       {/* Center is left completely open for the floating 3D battery */}
       <div className="h-44 sm:h-64 my-auto" />
 
-      {/* Bottom Clean Spec Cards */}
+      {/* Bottom Clean Spec Cards - Dark Titanium Obsidian */}
       <div className="max-w-6xl mx-auto w-full grid grid-cols-2 md:grid-cols-4 gap-4 pointer-events-auto">
-        <TiltCard delay={0.1}>
-          <div className="p-5 rounded-2xl bg-white border border-neutral-200/80 shadow-2xs h-full flex flex-col justify-between">
-            <div className="p-2.5 w-fit rounded-lg bg-neutral-100 text-neutral-800 mb-3">
+        <TiltCard delay={0.1} glowColor="rgba(56, 189, 248, 0.12)">
+          <div className="p-5 rounded-2xl bg-[#111622] border border-slate-800/90 shadow-xl h-full flex flex-col justify-between hover:border-slate-700 transition-colors">
+            <div className="p-2.5 w-fit rounded-xl bg-slate-800/80 text-cyan-400 border border-slate-700/60 mb-3 shadow-2xs">
               <BatteryCharging className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bold font-display text-neutral-900">145 KM</div>
-              <div className="text-xs font-medium text-neutral-500 mt-1">Certified Range per Swap</div>
+              <div className="text-2xl sm:text-3xl font-extrabold font-display text-white tracking-tight">145 KM</div>
+              <div className="text-xs font-medium text-slate-400 mt-1">Certified Range per Swap</div>
             </div>
           </div>
         </TiltCard>
 
-        <TiltCard delay={0.15}>
-          <div className="p-5 rounded-2xl bg-white border border-neutral-200/80 shadow-2xs h-full flex flex-col justify-between">
-            <div className="p-2.5 w-fit rounded-lg bg-neutral-100 text-neutral-800 mb-3">
+        <TiltCard delay={0.15} glowColor="rgba(251, 191, 36, 0.12)">
+          <div className="p-5 rounded-2xl bg-[#111622] border border-slate-800/90 shadow-xl h-full flex flex-col justify-between hover:border-slate-700 transition-colors">
+            <div className="p-2.5 w-fit rounded-xl bg-slate-800/80 text-amber-400 border border-slate-700/60 mb-3 shadow-2xs">
               <Zap className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bold font-display text-neutral-900">45 MIN</div>
-              <div className="text-xs font-medium text-neutral-500 mt-1">0 to 80% Fast Charge</div>
+              <div className="text-2xl sm:text-3xl font-extrabold font-display text-white tracking-tight">45 MIN</div>
+              <div className="text-xs font-medium text-slate-400 mt-1">0 to 80% Fast Charge</div>
             </div>
           </div>
         </TiltCard>
 
-        <TiltCard delay={0.2}>
-          <div className="p-5 rounded-2xl bg-white border border-neutral-200/80 shadow-2xs h-full flex flex-col justify-between">
-            <div className="p-2.5 w-fit rounded-lg bg-neutral-100 text-neutral-800 mb-3">
+        <TiltCard delay={0.2} glowColor="rgba(168, 85, 247, 0.12)">
+          <div className="p-5 rounded-2xl bg-[#111622] border border-slate-800/90 shadow-xl h-full flex flex-col justify-between hover:border-slate-700 transition-colors">
+            <div className="p-2.5 w-fit rounded-xl bg-slate-800/80 text-indigo-400 border border-slate-700/60 mb-3 shadow-2xs">
               <Cpu className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bold font-display text-neutral-900">BMS 3.0</div>
-              <div className="text-xs font-medium text-neutral-500 mt-1">Continuous Thermal Monitoring</div>
+              <div className="text-2xl sm:text-3xl font-extrabold font-display text-white tracking-tight">BMS 3.0</div>
+              <div className="text-xs font-medium text-slate-400 mt-1">Continuous Thermal Monitoring</div>
             </div>
           </div>
         </TiltCard>
 
-        <TiltCard delay={0.25}>
-          <div className="p-5 rounded-2xl bg-white border border-neutral-200/80 shadow-2xs h-full flex flex-col justify-between">
-            <div className="p-2.5 w-fit rounded-lg bg-neutral-100 text-neutral-800 mb-3">
+        <TiltCard delay={0.25} glowColor="rgba(52, 211, 153, 0.12)">
+          <div className="p-5 rounded-2xl bg-[#111622] border border-slate-800/90 shadow-xl h-full flex flex-col justify-between hover:border-slate-700 transition-colors">
+            <div className="p-2.5 w-fit rounded-xl bg-slate-800/80 text-emerald-400 border border-slate-700/60 mb-3 shadow-2xs">
               <Droplets className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bold font-display text-neutral-900">IP67</div>
-              <div className="text-xs font-medium text-neutral-500 mt-1">Submersible Water Seal</div>
+              <div className="text-2xl sm:text-3xl font-extrabold font-display text-white tracking-tight">IP67</div>
+              <div className="text-xs font-medium text-slate-400 mt-1">Submersible Water Seal</div>
             </div>
           </div>
         </TiltCard>

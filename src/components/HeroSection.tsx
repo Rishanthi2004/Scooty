@@ -45,9 +45,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-neutral-200/90 text-neutral-700 text-xs font-semibold mb-6 backdrop-blur-sm pointer-events-auto shadow-2xs"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111622]/90 border border-slate-800 text-slate-200 text-xs font-semibold mb-6 backdrop-blur-md pointer-events-auto shadow-md"
         >
-          <Sparkles className="w-3.5 h-3.5 text-neutral-800" />
+          <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
           <span>The Next Frontier of Urban Electric Mobility</span>
         </motion.div>
 

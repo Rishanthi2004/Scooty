@@ -146,7 +146,7 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
               <TiltCard
                 key={product.id}
                 delay={index * 0.12}
-                glowColor="rgba(0, 0, 0, 0.04)"
+                glowColor={isSelected ? "rgba(56, 189, 248, 0.2)" : "rgba(255, 255, 255, 0.05)"}
                 tiltAmount={4.5}
                 onClick={() => handleCardClick(product)}
                 className={`transition-transform duration-300 ${
@@ -156,8 +156,8 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
                 <div
                   className={`p-7 rounded-2xl flex flex-col justify-between h-full border transition-all duration-300 relative overflow-hidden backdrop-blur-xl ${
                     isSelected
-                      ? 'bg-white border-neutral-900 shadow-md ring-1 ring-neutral-900/10'
-                      : 'bg-white border-neutral-200/90 shadow-2xs hover:border-neutral-300 hover:shadow-sm'
+                      ? 'bg-[#161c2b] border-cyan-400/60 shadow-2xl ring-1 ring-cyan-400/30'
+                      : 'bg-[#111622] border-slate-800 shadow-xl hover:border-slate-700 hover:shadow-2xl'
                   }`}
                 >
                   {/* Top Badge & Finish Swatch */}
@@ -165,19 +165,19 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
                     <span
                       className={`text-[11px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-md border ${
                         isSelected
-                          ? 'bg-neutral-900 text-white border-neutral-900'
-                          : 'bg-neutral-100 text-neutral-600 border-neutral-200'
+                          ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40'
+                          : 'bg-slate-800/90 text-slate-300 border-slate-700'
                       }`}
                     >
                       {product.badge}
                     </span>
 
                     <div className="flex items-center gap-2">
-                      <span className="text-[11px] font-medium text-neutral-500">
+                      <span className="text-[11px] font-medium text-slate-400">
                         {product.colorName}
                       </span>
                       <div
-                        className="w-4 h-4 rounded-full border border-neutral-300 shadow-2xs"
+                        className="w-4 h-4 rounded-full border border-slate-600 shadow-2xs"
                         style={{ backgroundColor: product.colorHex }}
                       />
                     </div>
@@ -185,13 +185,13 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
 
                   {/* Title & Tagline */}
                   <div>
-                    <h3 className="font-display text-2xl font-bold text-neutral-900">
+                    <h3 className="font-display text-2xl font-bold text-white">
                       {product.name}
                     </h3>
-                    <p className="text-xs font-mono text-neutral-500 uppercase tracking-wider mt-0.5">
+                    <p className="text-xs font-mono text-cyan-400/90 uppercase tracking-wider mt-0.5">
                       {product.edition} • {product.motorPower}
                     </p>
-                    <p className="text-xs text-neutral-600 mt-2.5 leading-relaxed">
+                    <p className="text-xs text-slate-300 mt-2.5 leading-relaxed font-normal">
                       {product.tagline}
                     </p>
                   </div>
@@ -206,42 +206,42 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         {/* Ground reference line */}
-                        <line x1="20" y1="112" x2="220" y2="112" stroke="#e2e8f0" strokeWidth="1" strokeDasharray="3 3" />
+                        <line x1="20" y1="112" x2="220" y2="112" stroke="#334155" strokeWidth="1" strokeDasharray="3 3" />
                         
                         {/* Wheelbase Dimension Marker */}
-                        <line x1="50" y1="122" x2="190" y2="122" stroke="#94a3b8" strokeWidth="1" />
-                        <line x1="50" y1="118" x2="50" y2="126" stroke="#94a3b8" strokeWidth="1" />
-                        <line x1="190" y1="118" x2="190" y2="126" stroke="#94a3b8" strokeWidth="1" />
-                        <text x="120" y="126" textAnchor="middle" fontSize="8" fill="#64748b" fontFamily="monospace">1,280 mm</text>
+                        <line x1="50" y1="122" x2="190" y2="122" stroke="#64748b" strokeWidth="1" />
+                        <line x1="50" y1="118" x2="50" y2="126" stroke="#64748b" strokeWidth="1" />
+                        <line x1="190" y1="118" x2="190" y2="126" stroke="#64748b" strokeWidth="1" />
+                        <text x="120" y="126" textAnchor="middle" fontSize="8" fill="#94a3b8" fontFamily="monospace">1,280 mm</text>
 
                         {/* Wheels & Disc Brake */}
-                        <circle cx="50" cy="94" r="18" stroke="#1e293b" strokeWidth="4" />
-                        <circle cx="50" cy="94" r="11" stroke="#cbd5e1" strokeWidth="1.5" />
-                        <circle cx="50" cy="94" r="3.5" fill="#0f172a" />
+                        <circle cx="50" cy="94" r="18" stroke="#0f172a" strokeWidth="4" />
+                        <circle cx="50" cy="94" r="11" stroke="#475569" strokeWidth="1.5" />
+                        <circle cx="50" cy="94" r="3.5" fill="#38bdf8" />
 
-                        <circle cx="190" cy="94" r="18" stroke="#1e293b" strokeWidth="4" />
-                        <circle cx="190" cy="94" r="11" stroke="#cbd5e1" strokeWidth="1.5" />
-                        <circle cx="190" cy="94" r="3.5" fill="#0f172a" />
+                        <circle cx="190" cy="94" r="18" stroke="#0f172a" strokeWidth="4" />
+                        <circle cx="190" cy="94" r="11" stroke="#475569" strokeWidth="1.5" />
+                        <circle cx="190" cy="94" r="3.5" fill="#38bdf8" />
 
                         {/* Chassis Step-through Deck */}
                         <path
                           d="M50 94 L80 92 L148 92 L172 94"
-                          stroke="#334155"
+                          stroke="#64748b"
                           strokeWidth="6"
                           strokeLinecap="round"
                         />
-                        <rect x="90" y="85" width="55" height="7" rx="2" fill="#0f172a" />
+                        <rect x="90" y="85" width="55" height="7" rx="2" fill="#1e293b" />
 
                         {/* Monocoque Body Pod & Seat */}
                         <path
                           d="M62 88 Q78 62 108 62 L132 62 Q128 88 112 88 Z"
-                          fill="#f1f5f9"
-                          stroke="#64748b"
+                          fill="#1e293b"
+                          stroke="#94a3b8"
                           strokeWidth="1.5"
                         />
                         <path
                           d="M72 62 Q92 56 116 57 Q132 57 134 62 Z"
-                          fill="#18181b"
+                          fill="#0f172a"
                         />
 
                         {/* Passenger Handle Rail */}
@@ -250,65 +250,65 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
                         {/* Front Apron & Steering Column */}
                         <path
                           d="M148 92 L168 46 L174 24 L164 24 L154 52 Z"
-                          fill="#f8fafc"
-                          stroke="#64748b"
+                          fill="#1e293b"
+                          stroke="#94a3b8"
                           strokeWidth="1.5"
                         />
 
                         {/* Circular Halo Headlight Ring */}
-                        <circle cx="170" cy="46" r="6" stroke="#0f172a" strokeWidth="1.5" fill="#e2e8f0" />
+                        <circle cx="170" cy="46" r="6" stroke="#38bdf8" strokeWidth="1.5" fill="#0f172a" />
                         <circle cx="170" cy="46" r="3.5" fill="#38bdf8" />
 
                         {/* Minimalist Flyscreen Visor & Handlebar */}
-                        <path d="M164 24 L175 14" stroke="#0f172a" strokeWidth="2" strokeLinecap="round" />
-                        <path d="M172 24 L180 24" stroke="#475569" strokeWidth="2.5" strokeLinecap="round" />
-                        <circle cx="163" cy="12" r="3" stroke="#64748b" strokeWidth="1" fill="#f8fafc" />
+                        <path d="M164 24 L175 14" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" />
+                        <path d="M172 24 L180 24" stroke="#64748b" strokeWidth="2.5" strokeLinecap="round" />
+                        <circle cx="163" cy="12" r="3" stroke="#94a3b8" strokeWidth="1" fill="#334155" />
                       </svg>
                     </div>
                   </div>
 
                   {/* Core Performance Metric Grid */}
-                  <div className="grid grid-cols-3 gap-2 py-4 border-y border-neutral-100 my-2 text-center">
+                  <div className="grid grid-cols-3 gap-2 py-4 border-y border-slate-800 my-2 text-center">
                     <div>
-                      <div className="text-neutral-500 text-[10px] font-mono uppercase">
+                      <div className="text-slate-400 text-[10px] font-mono uppercase">
                         0–40 KM/H
                       </div>
-                      <div className="text-lg font-bold font-display text-neutral-900 mt-0.5">
+                      <div className="text-lg font-bold font-display text-white mt-0.5">
                         {product.accel}
                       </div>
                     </div>
 
-                    <div className="border-x border-neutral-100">
-                      <div className="text-neutral-500 text-[10px] font-mono uppercase">
+                    <div className="border-x border-slate-800">
+                      <div className="text-slate-400 text-[10px] font-mono uppercase">
                         TOP SPEED
                       </div>
-                      <div className="text-lg font-bold font-display text-neutral-900 mt-0.5">
+                      <div className="text-lg font-bold font-display text-white mt-0.5">
                         {product.topSpeed}
                       </div>
                     </div>
 
                     <div>
-                      <div className="text-neutral-500 text-[10px] font-mono uppercase">
+                      <div className="text-slate-400 text-[10px] font-mono uppercase">
                         RANGE
                       </div>
-                      <div className="text-lg font-bold font-display text-neutral-900 mt-0.5">
+                      <div className="text-lg font-bold font-display text-white mt-0.5">
                         {product.range}
                       </div>
                     </div>
                   </div>
 
                   {/* Feature Checklist */}
-                  <ul className="space-y-2 my-4 text-xs text-neutral-600">
+                  <ul className="space-y-2 my-4 text-xs text-slate-300">
                     {product.highlightSpecs.map((spec, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <Check className="w-3.5 h-3.5 text-neutral-900 shrink-0" />
+                        <Check className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
                         <span>{spec}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Action Button */}
-                  <div className="mt-5 pt-3 border-t border-neutral-100">
+                  <div className="mt-5 pt-3 border-t border-slate-800">
                     <AnimatedButton
                       variant={isSelected ? 'primary' : 'secondary'}
                       icon="arrow"
@@ -316,7 +316,11 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
                         soundFX.playClick();
                         onOpenBooking();
                       }}
-                      className="w-full text-xs py-3"
+                      className={
+                        isSelected
+                          ? 'w-full text-xs py-3 bg-white text-neutral-950 hover:bg-slate-200 border-white font-bold shadow-md'
+                          : 'w-full text-xs py-3 bg-slate-800/90 hover:bg-slate-700 text-white border-slate-700 shadow-sm'
+                      }
                     >
                       {isSelected ? 'Reserve This Spec' : 'Select Spec'}
                     </AnimatedButton>

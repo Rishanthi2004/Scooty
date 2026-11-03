@@ -15,6 +15,7 @@ export const TiltCard: React.FC<TiltCardProps> = ({
   children,
   className = '',
   tiltAmount = 4.5,
+  glowColor,
   delay = 0,
   onClick,
   style = {},
@@ -87,6 +88,13 @@ export const TiltCard: React.FC<TiltCardProps> = ({
         }}
         className="w-full h-full rounded-2xl relative transition-all duration-300 shadow-xs hover:shadow-md"
       >
+        {/* Interactive radial ambient glow on hover */}
+        {glowColor && (
+          <div
+            className="absolute -inset-0.5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-md pointer-events-none"
+            style={{ backgroundColor: glowColor }}
+          />
+        )}
         <div className="relative z-10 w-full h-full">
           {children}
         </div>

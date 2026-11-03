@@ -69,29 +69,29 @@ export const ColorSection: React.FC<ColorSectionProps> = ({
       {/* Center 3D Turntable Space */}
       <div className="h-32 sm:h-52 my-auto" />
 
-      {/* Bottom 3D Tilt Swatch Selector Dock */}
+      {/* Bottom 3D Tilt Swatch Selector Dock - Dark Titanium */}
       <div className="max-w-xl mx-auto w-full pointer-events-auto">
-        <TiltCard glowColor="rgba(0, 0, 0, 0.04)" tiltAmount={4.5}>
-          <div className="p-6 sm:p-7 rounded-3xl bg-white/95 border border-neutral-200/90 shadow-lg backdrop-blur-xl">
+        <TiltCard glowColor="rgba(56, 189, 248, 0.15)" tiltAmount={4.5}>
+          <div className="p-6 sm:p-7 rounded-3xl bg-[#111622]/95 border border-slate-800 shadow-2xl backdrop-blur-xl">
             {/* Active Color Info Header */}
             <div className="flex items-center justify-between mb-5">
               <div>
-                <span className="text-xs font-mono uppercase tracking-widest text-neutral-500">
+                <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-semibold">
                   {currentColor.badge}
                 </span>
-                <h3 className="text-xl font-bold font-display text-neutral-900">{currentColor.name}</h3>
+                <h3 className="text-xl font-bold font-display text-white">{currentColor.name}</h3>
               </div>
               <motion.div
                 key={currentColor.id}
                 initial={{ scale: 0.7, rotate: -15 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ type: 'spring', stiffness: 350, damping: 20 }}
-                className="w-8 h-8 rounded-full border border-neutral-300 shadow-sm ring-2 ring-neutral-900/10"
+                className="w-8 h-8 rounded-full border border-slate-600 shadow-sm ring-2 ring-cyan-400/30"
                 style={{ backgroundColor: currentColor.hex }}
               />
             </div>
 
-            <p className="text-xs text-neutral-600 mb-6 leading-relaxed">
+            <p className="text-xs text-slate-300 mb-6 leading-relaxed">
               {currentColor.description}
             </p>
 
@@ -110,12 +110,12 @@ export const ColorSection: React.FC<ColorSectionProps> = ({
                     }}
                     className={`group relative flex flex-col items-center p-2 rounded-2xl border transition-all cursor-pointer ${
                       isSelected
-                        ? 'border-neutral-900 bg-neutral-50 shadow-xs ring-1 ring-neutral-900/10'
-                        : 'border-neutral-200/90 hover:border-neutral-300 bg-white'
+                        ? 'border-cyan-400 bg-[#1e2638] shadow-md ring-1 ring-cyan-400/40'
+                        : 'border-slate-800 hover:border-slate-700 bg-[#151a26]'
                     }`}
                   >
                     <div
-                      className="w-9 h-9 rounded-full border border-neutral-300/80 shadow-2xs flex items-center justify-center transition-transform group-hover:scale-105"
+                      className="w-9 h-9 rounded-full border border-slate-600 shadow-2xs flex items-center justify-center transition-transform group-hover:scale-105"
                       style={{ backgroundColor: color.hex }}
                     >
                       {isSelected && (
@@ -126,7 +126,7 @@ export const ColorSection: React.FC<ColorSectionProps> = ({
                         />
                       )}
                     </div>
-                    <span className="text-[10px] font-medium text-neutral-700 mt-2 text-center truncate max-w-full">
+                    <span className="text-[10px] font-medium text-slate-300 mt-2 text-center truncate max-w-full">
                       {color.name.split(' ')[0]}
                     </span>
                   </motion.button>

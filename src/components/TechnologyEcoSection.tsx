@@ -101,7 +101,7 @@ export const TechnologyEcoSection: React.FC<TechnologyEcoSectionProps> = ({
           </motion.p>
         </div>
 
-        {/* 4 Interactive 3D Technology Cards */}
+        {/* 4 Interactive 3D Technology Cards - Dark Titanium */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {techCards.map((card, index) => {
             const Icon = card.icon;
@@ -109,30 +109,33 @@ export const TechnologyEcoSection: React.FC<TechnologyEcoSectionProps> = ({
               <TiltCard
                 key={card.title}
                 delay={index * 0.1}
-                glowColor="rgba(0, 0, 0, 0.04)"
+                glowColor="rgba(56, 189, 248, 0.12)"
                 tiltAmount={4.5}
                 className="h-full"
               >
-                <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-2xs hover:shadow-sm backdrop-blur-md h-full flex flex-col justify-between">
+                <div className="p-6 rounded-2xl bg-[#111622] border border-slate-800 shadow-xl hover:border-slate-700 hover:shadow-2xl backdrop-blur-md h-full flex flex-col justify-between transition-colors">
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <div className="p-2.5 rounded-xl bg-neutral-100 text-neutral-800 border border-neutral-200/60">
+                      <div className="p-2.5 rounded-xl bg-slate-800/80 text-cyan-400 border border-slate-700/60 shadow-2xs">
                         <Icon className="w-5 h-5" />
                       </div>
-                      <span className="text-[10px] font-mono tracking-widest text-neutral-500 uppercase">
+                      <span className="text-[10px] font-mono tracking-widest text-cyan-400/90 uppercase font-semibold">
                         {card.tag}
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-bold font-display text-neutral-900 mb-2">{card.title}</h3>
-                    <p className="text-xs text-neutral-600 leading-relaxed font-normal">
+                    <h3 className="text-lg font-bold font-display text-white mb-2">{card.title}</h3>
+                    <p className="text-xs text-slate-300 leading-relaxed font-normal">
                       {card.desc}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between text-[11px] text-neutral-500 font-mono">
+                  <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400 font-mono">
                     <span>TELEMETRY</span>
-                    <span className="text-neutral-900 font-semibold">ONLINE</span>
+                    <span className="text-emerald-400 font-semibold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                      ONLINE
+                    </span>
                   </div>
                 </div>
               </TiltCard>
@@ -140,16 +143,16 @@ export const TechnologyEcoSection: React.FC<TechnologyEcoSectionProps> = ({
           })}
         </div>
 
-        {/* Feature Comparison Matrix 3D Card */}
+        {/* Feature Comparison Matrix 3D Card - Dark Titanium */}
         <div className="mb-20">
-          <TiltCard glowColor="rgba(0, 0, 0, 0.04)" tiltAmount={4.5}>
-            <div className="p-7 sm:p-10 rounded-3xl bg-white border border-neutral-200/90 shadow-sm backdrop-blur-xl">
+          <TiltCard glowColor="rgba(56, 189, 248, 0.1)" tiltAmount={4.5}>
+            <div className="p-7 sm:p-10 rounded-3xl bg-[#111622] border border-slate-800 shadow-2xl backdrop-blur-xl">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                 <div>
-                  <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest block mb-1">
+                  <span className="text-xs font-mono text-cyan-400 uppercase tracking-widest block mb-1">
                     BENCHMARK COMPARISON
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-bold font-display text-neutral-900">
+                  <h3 className="text-2xl sm:text-3xl font-bold font-display text-white">
                     Why EV Scooty Outperforms the Rest
                   </h3>
                 </div>
@@ -167,43 +170,43 @@ export const TechnologyEcoSection: React.FC<TechnologyEcoSectionProps> = ({
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
                   <thead>
-                    <tr className="border-b border-neutral-200 text-neutral-600 font-mono uppercase tracking-wider">
+                    <tr className="border-b border-slate-800 text-slate-400 font-mono uppercase tracking-wider">
                       <th className="pb-4 font-semibold">Specification</th>
-                      <th className="pb-4 font-bold text-neutral-900">EV Scooty Aura X1</th>
-                      <th className="pb-4 font-normal text-neutral-500">Traditional Gas Scooter</th>
-                      <th className="pb-4 font-normal text-neutral-500">Generic EV Moped</th>
+                      <th className="pb-4 font-bold text-cyan-400">EV Scooty Aura X1</th>
+                      <th className="pb-4 font-normal text-slate-400">Traditional Gas Scooter</th>
+                      <th className="pb-4 font-normal text-slate-400">Generic EV Moped</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-neutral-100 text-neutral-600">
+                  <tbody className="divide-y divide-slate-800/80 text-slate-300">
                     <tr>
-                      <td className="py-4 font-medium text-neutral-900">Refuel / Swap Speed</td>
-                      <td className="py-4 font-bold text-neutral-900">10 Seconds (Swappable)</td>
-                      <td className="py-4 text-neutral-500">5-7 min at Gas Station</td>
-                      <td className="py-4 text-neutral-500">4-6 Hours Cable Plug</td>
+                      <td className="py-4 font-medium text-white">Refuel / Swap Speed</td>
+                      <td className="py-4 font-bold text-cyan-400 bg-slate-800/40 px-2 rounded">10 Seconds (Swappable)</td>
+                      <td className="py-4 text-slate-400">5-7 min at Gas Station</td>
+                      <td className="py-4 text-slate-400">4-6 Hours Cable Plug</td>
                     </tr>
                     <tr>
-                      <td className="py-4 font-medium text-neutral-900">Instant Acceleration (0-40)</td>
-                      <td className="py-4 font-bold text-neutral-900">2.9 Seconds</td>
-                      <td className="py-4 text-neutral-500">6.2 Seconds</td>
-                      <td className="py-4 text-neutral-500">5.4 Seconds</td>
+                      <td className="py-4 font-medium text-white">Instant Acceleration (0-40)</td>
+                      <td className="py-4 font-bold text-cyan-400 bg-slate-800/40 px-2 rounded">2.9 Seconds</td>
+                      <td className="py-4 text-slate-400">6.2 Seconds</td>
+                      <td className="py-4 text-slate-400">5.4 Seconds</td>
                     </tr>
                     <tr>
-                      <td className="py-4 font-medium text-neutral-900">Operating Cost per 100km</td>
-                      <td className="py-4 font-bold text-neutral-900">$0.32 (Electricity)</td>
-                      <td className="py-4 text-neutral-500">$4.80 (Gasoline)</td>
-                      <td className="py-4 text-neutral-500">$0.55 (Electricity)</td>
+                      <td className="py-4 font-medium text-white">Operating Cost per 100km</td>
+                      <td className="py-4 font-bold text-cyan-400 bg-slate-800/40 px-2 rounded">$0.32 (Electricity)</td>
+                      <td className="py-4 text-slate-400">$4.80 (Gasoline)</td>
+                      <td className="py-4 text-slate-400">$0.55 (Electricity)</td>
                     </tr>
                     <tr>
-                      <td className="py-4 font-medium text-neutral-900">Frame Architecture</td>
-                      <td className="py-4 font-bold text-neutral-900">Aircraft Monocoque 6061-T6</td>
-                      <td className="py-4 text-neutral-500">Welded Tubular Steel</td>
-                      <td className="py-4 text-neutral-500">Stamped Steel Plate</td>
+                      <td className="py-4 font-medium text-white">Frame Architecture</td>
+                      <td className="py-4 font-bold text-cyan-400 bg-slate-800/40 px-2 rounded">Aircraft Monocoque 6061-T6</td>
+                      <td className="py-4 text-slate-400">Welded Tubular Steel</td>
+                      <td className="py-4 text-slate-400">Stamped Steel Plate</td>
                     </tr>
                     <tr>
-                      <td className="py-4 font-medium text-neutral-900">Smartphone Digital Key</td>
-                      <td className="py-4 font-bold text-neutral-900">Included (Proximity BLE)</td>
-                      <td className="py-4 text-neutral-500">Physical Key Only</td>
-                      <td className="py-4 text-neutral-500">Basic Remote Fob</td>
+                      <td className="py-4 font-medium text-white">Smartphone Digital Key</td>
+                      <td className="py-4 font-bold text-cyan-400 bg-slate-800/40 px-2 rounded">Included (Proximity BLE)</td>
+                      <td className="py-4 text-slate-400">Physical Key Only</td>
+                      <td className="py-4 text-slate-400">Basic Remote Fob</td>
                     </tr>
                   </tbody>
                 </table>
@@ -225,28 +228,28 @@ export const TechnologyEcoSection: React.FC<TechnologyEcoSectionProps> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((item, idx) => (
-              <TiltCard key={item.name} delay={idx * 0.12} glowColor="rgba(0, 0, 0, 0.04)" tiltAmount={4.5}>
-                <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-2xs hover:shadow-sm backdrop-blur-md h-full flex flex-col justify-between">
+              <TiltCard key={item.name} delay={idx * 0.12} glowColor="rgba(251, 191, 36, 0.1)" tiltAmount={4.5}>
+                <div className="p-6 rounded-2xl bg-[#111622] border border-slate-800 shadow-xl hover:border-slate-700 hover:shadow-2xl backdrop-blur-md h-full flex flex-col justify-between transition-colors">
                   <div>
                     {/* Stars */}
-                    <div className="flex items-center gap-1 text-amber-500 mb-4">
+                    <div className="flex items-center gap-1 text-amber-400 mb-4">
                       {[...Array(item.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-amber-500 text-amber-500" />
+                        <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                       ))}
                     </div>
 
-                    <Quote className="w-5 h-5 text-neutral-300 mb-2" />
-                    <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                    <Quote className="w-5 h-5 text-slate-600 mb-2" />
+                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
                       "{item.quote}"
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
+                  <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
                     <div>
-                      <h4 className="text-sm font-semibold text-neutral-900">{item.name}</h4>
-                      <p className="text-[11px] text-neutral-500">{item.role}</p>
+                      <h4 className="text-sm font-semibold text-white">{item.name}</h4>
+                      <p className="text-[11px] text-slate-400">{item.role}</p>
                     </div>
-                    <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
+                    <span className="text-[10px] font-mono text-cyan-400/90 uppercase tracking-widest">
                       {item.miles}
                     </span>
                   </div>

@@ -46,57 +46,57 @@ export const PerformanceSection: React.FC = () => {
       {/* Middle viewport remains clear for the motion */}
       <div className="h-32 sm:h-48 my-auto" />
 
-      {/* Bottom Clean Telemetry Cards */}
+      {/* Bottom Clean Telemetry Cards - Dark Obsidian */}
       <div className="max-w-7xl mx-auto w-full grid grid-cols-2 md:grid-cols-4 gap-4 pointer-events-auto">
-        <TiltCard delay={0.1}>
-          <div className="p-5 rounded-2xl bg-white text-neutral-900 border border-neutral-200/80 shadow-2xs h-full flex flex-col justify-between">
-            <div className="flex items-center justify-between text-neutral-400 text-xs mb-2 font-mono">
+        <TiltCard delay={0.1} glowColor="rgba(56, 189, 248, 0.12)">
+          <div className="p-5 rounded-2xl bg-[#111622] text-white border border-slate-800/90 shadow-xl h-full flex flex-col justify-between hover:border-slate-700 transition-colors">
+            <div className="flex items-center justify-between text-slate-400 text-xs mb-2 font-mono">
               <span>ACCELERATION</span>
-              <Gauge className="w-4 h-4 text-neutral-700" />
+              <Gauge className="w-4 h-4 text-cyan-400" />
             </div>
-            <div className="text-3xl font-black font-display tracking-tight text-neutral-900">
-              2.9 <span className="text-sm font-semibold text-neutral-400">SEC</span>
+            <div className="text-3xl font-black font-display tracking-tight text-white">
+              2.9 <span className="text-sm font-semibold text-slate-400">SEC</span>
             </div>
-            <div className="text-[11px] text-neutral-500 mt-1">0 to 40 km/h sprint</div>
+            <div className="text-[11px] text-slate-400 mt-1">0 to 40 km/h sprint</div>
           </div>
         </TiltCard>
 
-        <TiltCard delay={0.15}>
-          <div className="p-5 rounded-2xl bg-white text-neutral-900 border border-neutral-200/80 shadow-2xs h-full flex flex-col justify-between">
-            <div className="flex items-center justify-between text-neutral-400 text-xs mb-2 font-mono">
+        <TiltCard delay={0.15} glowColor="rgba(249, 115, 22, 0.12)">
+          <div className="p-5 rounded-2xl bg-[#111622] text-white border border-slate-800/90 shadow-xl h-full flex flex-col justify-between hover:border-slate-700 transition-colors">
+            <div className="flex items-center justify-between text-slate-400 text-xs mb-2 font-mono">
               <span>PEAK POWER</span>
-              <Zap className="w-4 h-4 text-neutral-700" />
+              <Zap className="w-4 h-4 text-amber-400" />
             </div>
-            <div className="text-3xl font-black font-display tracking-tight text-neutral-900">
-              6.8 <span className="text-sm font-semibold text-neutral-400">KW</span>
+            <div className="text-3xl font-black font-display tracking-tight text-white">
+              6.8 <span className="text-sm font-semibold text-slate-400">KW</span>
             </div>
-            <div className="text-[11px] text-neutral-500 mt-1">HyperDrive motor</div>
+            <div className="text-[11px] text-slate-400 mt-1">HyperDrive motor</div>
           </div>
         </TiltCard>
 
-        <TiltCard delay={0.2}>
-          <div className="p-5 rounded-2xl bg-white text-neutral-900 border border-neutral-200/80 shadow-2xs h-full flex flex-col justify-between">
-            <div className="flex items-center justify-between text-neutral-400 text-xs mb-2 font-mono">
+        <TiltCard delay={0.2} glowColor="rgba(168, 85, 247, 0.12)">
+          <div className="p-5 rounded-2xl bg-[#111622] text-white border border-slate-800/90 shadow-xl h-full flex flex-col justify-between hover:border-slate-700 transition-colors">
+            <div className="flex items-center justify-between text-slate-400 text-xs mb-2 font-mono">
               <span>MAX VELOCITY</span>
-              <Compass className="w-4 h-4 text-neutral-700" />
+              <Compass className="w-4 h-4 text-indigo-400" />
             </div>
-            <div className="text-3xl font-black font-display tracking-tight text-neutral-900">
-              85 <span className="text-sm font-semibold text-neutral-400">KM/H</span>
+            <div className="text-3xl font-black font-display tracking-tight text-white">
+              85 <span className="text-sm font-semibold text-slate-400">KM/H</span>
             </div>
-            <div className="text-[11px] text-neutral-500 mt-1">Regulated highway speed</div>
+            <div className="text-[11px] text-slate-400 mt-1">Regulated highway speed</div>
           </div>
         </TiltCard>
 
-        <TiltCard delay={0.25}>
-          <div className="p-5 rounded-2xl bg-white text-neutral-900 border border-neutral-200/80 shadow-2xs h-full flex flex-col justify-between">
-            <div className="flex items-center justify-between text-neutral-400 text-xs mb-2 font-mono">
+        <TiltCard delay={0.25} glowColor="rgba(52, 211, 153, 0.12)">
+          <div className="p-5 rounded-2xl bg-[#111622] text-white border border-slate-800/90 shadow-xl h-full flex flex-col justify-between hover:border-slate-700 transition-colors">
+            <div className="flex items-center justify-between text-slate-400 text-xs mb-2 font-mono">
               <span>KINETIC RECOVERY</span>
-              <span className="text-neutral-700 font-bold text-xs">REGEN</span>
+              <span className="text-emerald-400 font-bold text-xs">REGEN</span>
             </div>
-            <div className="text-3xl font-black font-display tracking-tight text-neutral-900">
-              +15% <span className="text-sm font-semibold text-neutral-400">RANGE</span>
+            <div className="text-3xl font-black font-display tracking-tight text-white">
+              +15% <span className="text-sm font-semibold text-slate-400">RANGE</span>
             </div>
-            <div className="text-[11px] text-neutral-500 mt-1">Dual-mode brake regeneration</div>
+            <div className="text-[11px] text-slate-400 mt-1">Dual-mode brake regeneration</div>
           </div>
         </TiltCard>
       </div>
